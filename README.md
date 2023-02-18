@@ -39,12 +39,14 @@ repos:
     hooks:
       - id: flake8
         #args: [ --max-function-length, '100', --mfl-include-docstring, --mfl-include-comment-lines ]
-        additional_dependencies: [ "flake8-max-function-length==0.7.0" ]
+        additional_dependencies: [ "flake8-max-function-length==0.7.1" ]
 ```
 
 ## Changelog
 
 ### [UNRELEASED]
+
+### [0.7.1] - 2023-02-18
 #### Added
 
 - Add badges to README.md and show it in PyPI
