@@ -3,7 +3,7 @@ requires = ["flit_core >=3.2,<4"]
 build-backend = "flit_core.buildapi"
 
 [project]
-name = "flake8_max_function_length"
+name = "flake8-max-function-length"
 keywords = [
     "flake8",
     "flake8 plugin",
