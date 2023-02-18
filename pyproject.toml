@@ -11,6 +11,7 @@ keywords = [
 ]
 authors = [{ name = "Ghazi Abbassi" }]
 license = { file = "LICENSE" }
+readme = "README.md"
 classifiers = [
     "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
