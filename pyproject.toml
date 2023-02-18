@@ -42,7 +42,7 @@ name = "flake8_max_function_length"
 [tool.tbump]
 
 [tool.tbump.version]
-current = "0.6.0"
+current = "0.7.0"
 regex = '''
   (?P<major>\d+)
   \.
