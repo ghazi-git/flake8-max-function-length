@@ -5,8 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [UNRELEASED]
+### Added
+- Fix GitHub release automation
 
-### [0.7.2] - 2023-02-18
+## [0.7.2] - 2023-02-18
 ### Added
 - Automate GitHub release creation
 

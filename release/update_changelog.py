@@ -6,7 +6,7 @@ CHANGELOG_RELATIVE_PATH = "CHANGELOG.md"
 CURRENT_DIR = pathlib.Path(__file__).parent.resolve()
 CHANGELOG_ABS_PATH = CURRENT_DIR.parent / CHANGELOG_RELATIVE_PATH
 UNRELEASED_LINE = "## [UNRELEASED]"
-NEW_VERSION_LINE_TEMPLATE = "### [{version}] - {date}\n"
+NEW_VERSION_LINE_TEMPLATE = "## [{version}] - {date}\n"
 
 
 def main(version):
