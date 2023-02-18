@@ -47,6 +47,11 @@ repos:
 ### [UNRELEASED]
 #### Added
 
+- Add badges to README.md and show it in PyPI
+
+### [0.7.0] - 2023-02-18
+#### Added
+
 - Rule to enforce a limit on function/method length.
 - Allow changing the maximum function length and how the function length is calculated via configuration options.
 
