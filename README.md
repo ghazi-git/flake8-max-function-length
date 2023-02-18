@@ -42,23 +42,6 @@ repos:
         additional_dependencies: [ "flake8-max-function-length==0.7.1" ]
 ```
 
-## Changelog
-
-### [UNRELEASED]
-
-### [0.7.1] - 2023-02-18
-#### Added
-
-- Add badges to README.md and show it in PyPI
-- Update the changelog when a release is created
-
-### [0.7.0] - 2023-02-18
-#### Added
-
-- Rule to enforce a limit on function/method length.
-- Allow changing the maximum function length and how the function length is calculated via configuration options.
-
-
 ## Similar tools
 
 - flake8-functions has a similar rule for maximum function length, however, it [doesn't exclude for empty lines

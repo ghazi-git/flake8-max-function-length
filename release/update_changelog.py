@@ -2,10 +2,10 @@ import pathlib
 from argparse import ArgumentParser
 from datetime import date
 
-CHANGELOG_RELATIVE_PATH = "README.md"
+CHANGELOG_RELATIVE_PATH = "CHANGELOG.md"
 CURRENT_DIR = pathlib.Path(__file__).parent.resolve()
 CHANGELOG_ABS_PATH = CURRENT_DIR.parent / CHANGELOG_RELATIVE_PATH
-UNRELEASED_LINE = "### [UNRELEASED]"
+UNRELEASED_LINE = "## [UNRELEASED]"
 NEW_VERSION_LINE_TEMPLATE = "### [{version}] - {date}\n"
 
 

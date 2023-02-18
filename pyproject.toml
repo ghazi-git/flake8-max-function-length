@@ -32,7 +32,7 @@ release = ["flit", "keyring", "tbump"]
 [project.urls]
 Code = "https://github.com/ghazi-git/flake8-max-function-length"
 Issues = "https://github.com/ghazi-git/flake8-max-function-length/issues"
-Changelog = "https://github.com/ghazi-git/flake8-max-function-length#changelog"
+Changelog = "https://github.com/ghazi-git/flake8-max-function-length/releases"
 
 [project.entry-points."flake8.extension"]
 MFL = "flake8_max_function_length.plugin:Plugin"

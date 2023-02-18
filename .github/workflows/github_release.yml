@@ -25,7 +25,7 @@ jobs:
         uses: mindsers/changelog-reader-action@v2
         with:
           version: ${{ steps.tag_name.outputs.current_version }}
-          path: README.md
+          path: ./CHANGELOG.md
       - name: Create/update release
         uses: ncipollo/release-action@v1
         with:
