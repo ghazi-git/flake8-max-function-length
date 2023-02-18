@@ -48,6 +48,7 @@ repos:
 #### Added
 
 - Add badges to README.md and show it in PyPI
+- Update the changelog when a release is created
 
 ### [0.7.0] - 2023-02-18
 #### Added
