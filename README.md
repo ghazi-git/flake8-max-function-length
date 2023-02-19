@@ -44,7 +44,7 @@ repos:
 
 ## Similar tools
 
-- flake8-functions has a similar rule for maximum function length, however, it [doesn't exclude for empty lines
+- flake8-functions has a similar rule for maximum function length, however, it [doesn't allow excluding empty lines
 and comments](https://github.com/best-doctor/flake8-functions/issues/9).
 - Pylint has the [too-many-statements](https://pylint.readthedocs.io/en/latest/user_guide/checkers/features.html#design-checker-messages)
 rule, which is also similar to this one. Still, I find it easier to reason about number of lines as opposed to
