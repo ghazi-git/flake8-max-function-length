@@ -1,6 +1,6 @@
 import ast
 from tokenize import TokenInfo
-from typing import List, Tuple, Union
+from typing import List, Optional, Union
 
 from flake8.options.manager import OptionManager
 
@@ -113,63 +113,41 @@ def get_function_length(
     include_empty_lines=False,
     include_comment_lines=False,
 ) -> int:
-    start, end = get_function_bounds(func, include_func_def, include_docstring)
-    if start >= end:
-        return 0
-
-    return calculate_function_length(
-        file_tokens, start, end, include_empty_lines, include_comment_lines
-    )
-
-
-def get_function_bounds(
-    func: FuncDef, include_func_def: bool, include_docstring: bool
-) -> Tuple[int, int]:
     func_start, func_end = func.lineno, func.end_lineno
 
     if not include_func_def:
         func_start = func.body[0].lineno
 
-    if not include_docstring:
-        # Check if the first element in the function body is a docstring or not.
-        # The check is based on ast.get_docstring
-        has_docstring = (
-            isinstance(func.body[0], ast.Expr)
-            and isinstance(func.body[0].value, ast.Constant)
-            and isinstance(func.body[0].value.value, str)
-        )
-        if has_docstring and len(func.body) == 1:
-            # function has a docstring only, so we move the func end to just
-            # before the docstring start
-            func_end = func.body[0].lineno - 1
-        elif has_docstring:
-            func_start = func.body[0].end_lineno + 1
+    func_length = func_end - func_start + 1
 
-    return func_start, func_end
-
-
-def calculate_function_length(
-    file_tokens: List[TokenInfo],
-    start: int,
-    end: int,
-    include_empty_lines: bool,
-    include_comment_lines: bool,
-) -> int:
-    func_length = end - start + 1
+    if not include_docstring and (docstring := get_docstring(func)):
+        func_length -= docstring.end_lineno - docstring.lineno + 1
 
     if not include_empty_lines:
-        tokens = get_function_tokens(file_tokens, start, end)
+        tokens = get_function_tokens(file_tokens, func_start, func_end)
         empty_lines = {token.start[0] for token in tokens if not token.line.strip()}
         func_length -= len(empty_lines)
 
     if not include_comment_lines:
-        tokens = get_function_tokens(file_tokens, start, end)
+        tokens = get_function_tokens(file_tokens, func_start, func_end)
         comment_lines = {
             token.start[0] for token in tokens if token.line.strip().startswith("#")
         }
         func_length -= len(comment_lines)
 
     return func_length
+
+
+def get_docstring(func: FuncDef) -> Optional[ast.Expr]:
+    # Check if the first element in the function body is a docstring or not.
+    # This check is based on ast.get_docstring
+    has_docstring = (
+        isinstance(func.body[0], ast.Expr)
+        and isinstance(func.body[0].value, ast.Constant)
+        and isinstance(func.body[0].value.value, str)
+    )
+    if has_docstring:
+        return func.body[0]
 
 
 def get_function_tokens(
