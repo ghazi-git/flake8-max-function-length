@@ -41,7 +41,7 @@ repos:
     hooks:
       - id: flake8
         #args: [ --max-function-length, '100', --mfl-include-docstring, --mfl-include-comment-lines ]
-        additional_dependencies: [ "flake8-max-function-length==0.7.3" ]
+        additional_dependencies: [ "flake8-max-function-length==0.7.4" ]
 ```
 
 ## Similar tools
