@@ -28,6 +28,7 @@ dependencies = ["flake8"]
 [project.optional-dependencies]
 dev = ["pre-commit"]
 release = ["flit", "keyring", "tbump"]
+test = ["pytest", "pre-commit"]
 
 [project.urls]
 Code = "https://github.com/ghazi-git/flake8-max-function-length"
