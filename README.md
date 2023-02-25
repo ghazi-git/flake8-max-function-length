@@ -2,7 +2,9 @@
 
 A configurable [flake8](https://github.com/pycqa/flake8) plugin to enforce a maximum function/method length.
 
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/ghazi-git/flake8-max-function-length/tests.yml?branch=main&label=Tests&logo=GitHub)](https://github.com/ghazi-git/flake8-max-function-length/actions/workflows/tests.yml)
 [![PyPI](https://img.shields.io/pypi/v/flake8-max-function-length)](https://pypi.org/project/flake8-max-function-length/)
+[![PyPI](https://img.shields.io/pypi/pyversions/flake8-max-function-length?logo=python&logoColor=white)](https://pypi.org/project/flake8-max-function-length/)
 [![PyPI - License](https://img.shields.io/pypi/l/flake8-max-function-length)](https://github.com/ghazi-git/flake8-max-function-length/blob/main/LICENSE)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
