@@ -12,5 +12,4 @@ repos:
     rev: 2024.3.1
     hooks:
       - id: shed
-        additional_dependencies: [ 'black~=23.1' ]
         types_or: [python, pyi, markdown, rst]
