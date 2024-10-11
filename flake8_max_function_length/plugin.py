@@ -9,7 +9,7 @@ FuncDef = Union[ast.FunctionDef, ast.AsyncFunctionDef]
 
 class Plugin:
     name = "flake8-max-function-length"
-    version = "0.8.0"
+    version = "0.9.0"
 
     def __init__(self, tree, file_tokens):
         self.tree = tree
